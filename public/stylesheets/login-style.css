@@ -1,0 +1,96 @@
+body{
+  background: linear-gradient(to top, rgba(2, 48, 100, 0.25), rgba(63, 122, 188, 0.5), #fff);      
+  min-height: 2048px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.loginForm {
+  margin-top: 15vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 320px;
+}
+
+.topBar{
+  width: 100%;
+  padding-left: 50px;
+}
+
+.logo{
+  height: 80px;
+}
+
+.titleLogin{
+  font-size: 36px;
+  margin-left: 20px;
+  font-family: sans-serif;
+  color: #3b4151;
+}
+
+.titleMain{
+  font-size: 36px;
+  margin-left: 20px;
+  font-family: sans-serif;
+  color: #3b4151;
+  padding-right: 800px;
+}
+
+.table{
+  margin-top: 10px;
+  width : 100%;
+}
+
+.frameName
+{
+  font-size: 26px;
+  margin: 0;
+  font-family: sans-serif;
+  color: #3b4151;   
+}
+
+.label{
+  margin-left: 5px;
+  font-size: 14px;
+  font-family: sans-serif;
+  color: #3b4151;
+  -webkit-font-smoothing: antialiased;
+}
+
+.editField
+{
+  border: 1px solid #D5DBE2;
+  border-radius: 3px;
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 0.8rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+}
+
+.submitTd{
+  display: block;
+}
+
+.button {
+  display: block;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  background: #3f7abc;
+  color: #fff !important;
+  border: 2px solid transparent;
+  margin: 0 0 0.5rem 0;
+  padding: 0.5rem 1.5rem;
+  text-shadow: none;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+  border-radius: 4px;
+  min-width: 200px;
+  min-height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}  

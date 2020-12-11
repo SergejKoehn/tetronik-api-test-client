@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="stylesheets/login-style.css">
+    <title>tetronik API test client</title>
+  </head>
+  <body>
+    <div class="topBar">
+      <img src="images/tetronik_logo_hd.png" class="logo">
+    </div>
+    <div class="loginForm">
+      <p class="titleLogin">Log in</p>
+      <form action="/gui" method="POST">
+        <table class="table">
+          <tr>
+            <td><label class="label" for="userName">User name</label></td>
+          </tr>
+          <tr>
+            <td><input class="editField" id="userName" name="user" type="text" autofocus ></td>
+          </tr>
+          <tr>
+            <td><label class="label" for="userPwd">Password</label></td>
+          </tr>
+          <tr>
+            <td><input class="editField" id="userPwd" name="password" type="password"></td>
+          </tr>
+          <tr>            
+            <td class="submitTd" colspan="2"><input class="button" id="submitBtn" name="action" type="submit" value="Log in"></td>
+          </tr>
+        </table>
+      </form>      
+    </div>
+  </body>
+</html>
