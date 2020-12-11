@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <title>API emu: OAuth2 Redirect</title>
+  <body>
+  </body>
+</html>
+<script>
+  'use strict';
+  function run () {
+    var oauth2      = window.opener.authData;
+    var sentState   = oauth2.state;
+    var redirect_uri= oauth2.redirect_uri;
+    var isValid, qp, arr;
+
+    if (/code|token|error/.test(window.location.hash) ) 
+      qp = window.location.hash.substring(1);
+    else
+      qp = location.search.substring(1);
+    
+    arr = qp.split("&");
+
+    arr.forEach( function (v,i,_arr) 
+      { 
+        _arr[i]= '"' + v.replace('=', '":"') + '"';
+      }
+    );
+
+    try 
+    {
+      qp= JSON.parse( '{' + arr.join() + '}', function (key, value) {
+        return key === "" ? value : decodeURIComponent(value)
+        }
+      );
+    }
+    catch(err)
+    {
+      qp= {};
+    } 
+    
+    isValid= qp.state == sentState
+
+    if ( !isValid )
+      alert("Login failed!");
+
+    oauth2.callback(isValid,qp);
+    window.close();
+  }
+
+  window.addEventListener('DOMContentLoaded', function () {
+    run();
+  });
+</script>

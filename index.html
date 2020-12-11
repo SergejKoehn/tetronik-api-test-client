@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <title>API Emu-Client</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="image/x-icon" rel="shortcut icon" href="client/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="client/style.css">
+    <script src="./client/tools.js"></script>
+  </head>
+  <body>
+    <div class="topBar">
+      <table>
+        <tbody>
+          <tr>
+            <td><img src="client/tetronik_logo_hd.png" class="logo"></td>
+            <td><p class="titleMain">API Emu-Client</p></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="authForm" class="authForm">
+        <input type="hidden" name="response_type" value="token"></input>
+        <input type="hidden" name="redirect_uri" value="/client/redirect.html"></input>
+        <table class="table">
+          <tr>
+            <td><label class="label" for="userName">Client ID</label></td>
+          </tr>
+          <tr>
+            <td><input id="clientId" class="editField" type="edit" name="client_id" autofocus></input></td>
+          </tr>
+          <tr>
+            <td><label class="label" for="userPwd">Client Secret</label></td>
+          </tr>
+          <tr>
+            <td><input id="clientSecret" class="editField" type="edit" name="client_secret"></input></td>
+          </tr>
+          <tr>            
+            <td><input id="btAuthorize" class="authButton" type="submit" value="Authorize"></input></td>
+          </tr>
+        </table>
+    </div>
+  </body>
+  <script src="./client/auth.js"></script>  
+</html>
